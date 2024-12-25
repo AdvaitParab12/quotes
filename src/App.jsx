@@ -4,18 +4,7 @@ import List from "@/components/ListQuotes";
 import AddQuotes from "@/components/AddQuotes";
 
 function App() {
-  const [quotes, setQuotes] = useState([
-    {
-      id: 0,
-      likes: 5,
-      title: "Life is Good",
-    },
-    {
-      id: 1,
-      likes: 5,
-      title: "Nextjs is awesome",
-    },
-  ]);
+  const [quotes, setQuotes] = useState([]);
   const handleAddQuote = (title) => {
     const quote = {
       id: crypto.randomUUID(),

@@ -1,11 +1,18 @@
 import React from "react";
 import SingleQuotes from "@/components/SingleQuotes";
 
-function ListQuotes({ quotes, onDelete, onLike, onDislike,onSort }) {
+function ListQuotes({ quote, onDelete, onLike, onDislike, }) {
   return (
     <div className="flex flex-col gap-2">
-      {quotes.map((quote) => (
-        <SingleQuotes key={quote.id} quote={quote} onDelete={onDelete} onLike={onLike} onDislike={onDislike} onSort={onSort} />
+      {quote.map((quote) => (
+        <SingleQuotes
+          key={quote.id}
+          quote={quote}
+          onDelete={onDelete}
+          onLike={onLike}
+          onDislike={onDislike}
+          
+        />
       ))}
     </div>
   );

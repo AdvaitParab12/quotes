@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
+
 function AddQuote({ onSubmit, onSort }) {
   const [inputValue, setInputValue] = useState("");
   const handleSubmit = (e) => {
@@ -10,6 +11,8 @@ function AddQuote({ onSubmit, onSort }) {
     onSubmit(inputValue)
     setInputValue("");
   };
+
+
   return (
     <form onSubmit={handleSubmit}>
       <Input
